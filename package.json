@@ -1,5 +1,5 @@
 {
-  "name": "@Linusteller/dsh-session-delete",
+  "name": "@linusteller/dsh-session-delete",
   "version": "0.1.0",
   "description": "给 DeepSeek Harness 增加真正的「删除会话」：从侧栏会话菜单永久删除一个会话（停活动、清工作区记账/归档/置顶、删除投影缓存与日志文件），而不是只能归档。",
   "type": "module",
@@ -26,7 +26,7 @@
     "删除会话"
   ],
   "license": "MIT",
-  "author": "Linusteller",
+  "author": "linusteller",
   "engines": {
     "node": ">=18"
   },

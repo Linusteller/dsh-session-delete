@@ -13,20 +13,20 @@ DSH 内建的「归档」（archive）只做一件事：把会话 id 加进 `arc
 ### 方式一：作为 bundle 安装（推荐）
 
 ```bash
-dsh plugin --profile desktop add @Linusteller/dsh-session-delete
+dsh plugin --profile desktop add @linusteller/dsh-session-delete
 ```
 
 `cordis.patch.yml` 会自动插入一行，加载插件。
 
 ### 方式二：手动安装
 
-1. 把本目录复制到 profile 的 `node_modules/@Linusteller/dsh-session-delete`（或用 `link:` 依赖）。
+1. 把本目录复制到 profile 的 `node_modules/@linusteller/dsh-session-delete`（或用 `link:` 依赖）。
 2. 在该 profile 自己的 `cordis.patch.yml` 里加一行：
 
 ```yaml
 - insert:
     - id: dsh-session-delete
-      name: '@Linusteller/dsh-session-delete'
+      name: '@linusteller/dsh-session-delete'
 ```
 
 > 注意：手动加行后**不要再**让 `cordis.patch.yml`（本目录里的那份）也被应用，否则同一插件会因 id 冲突重复加载。

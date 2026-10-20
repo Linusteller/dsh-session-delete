@@ -4,4 +4,4 @@
 # 否则会重复加载并因插件 id 冲突报错）。
 - insert:
     - id: dsh-session-delete
-      name: '@Linusteller/dsh-session-delete'
+      name: '@linusteller/dsh-session-delete'
