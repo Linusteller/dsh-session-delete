@@ -1,0 +1,7 @@
+# dsh-delete-session bundle patch：在 profile 根部插入一行。
+# 安装为 bundle（`dsh plugin --profile desktop add <path>`）会自动应用此补丁；
+# 手动安装需在 profile 自己的 cordis.patch.yml 里加同样一行（不要同时加此文件，
+# 否则会重复加载并因插件 id 冲突报错）。
+- insert:
+    - id: dsh-session-delete
+      name: '@Linusteller/dsh-session-delete'
