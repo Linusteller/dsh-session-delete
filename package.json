@@ -1,60 +1,62 @@
-{
-  "name": "dsh-delete-sessions",
-  "version": "0.1.0",
-  "description": "给 DeepSeek Harness 增加真正的「删除会话」：从侧栏会话菜单永久删除一个会话（停活动、清工作区记账/归档/置顶、删除投影缓存与日志文件），而不是只能归档。",
-  "type": "module",
-  "main": "lib/index.js",
-  "exports": {
-    ".": "./lib/index.js",
-    "./client": "./lib/client.js",
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "lib",
-    "cordis.patch.yml",
-    "README.md",
-    "LICENSE"
-  ],
-  "scripts": {
-    "test": "node --check lib/index.js && node --check lib/client.js"
-  },
-  "keywords": [
-    "dsh-plugin",
-    "deepseek-harness",
-    "session",
-    "delete",
-    "删除会话"
-  ],
-  "license": "MIT",
-  "author": "linusteller",
-  "engines": {
-    "node": ">=18"
-  },
-  "peerDependencies": {
-    "@deepseek-ai/cordis": ">=4"
-  },
-  "peerDependenciesMeta": {
-    "@deepseek-ai/cordis": {
-      "optional": true
-    }
-  },
-  "dsh": {
-    "bundle": {
-      "patch": "./cordis.patch.yml"
-    },
-    "client": {
-      "platform": "web"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Linusteller/dsh-session-delete.git"
-  },
-  "homepage": "https://github.com/Linusteller/dsh-session-delete#readme",
-  "bugs": {
-    "url": "https://github.com/Linusteller/dsh-session-delete/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+﻿{
+    "name":  "dsh-delete-sessions",
+    "version":  "0.2.0",
+    "description":  "给 DeepSeek Harness 增加真正的「删除会话」：从侧栏会话菜单永久删除一个会话（停活动、清工作区记账/归档/置顶、删除投影缓存与日志文件），而不是只能归档。",
+    "type":  "module",
+    "main":  "lib/index.js",
+    "exports":  {
+                    ".":  "./lib/index.js",
+                    "./client":  "./lib/client.js",
+                    "./package.json":  "./package.json"
+                },
+    "files":  [
+                  "lib",
+                  "cordis.patch.yml",
+                  "README.md",
+                  "LICENSE",
+                  "screenshots.json",
+                  "assets"
+              ],
+    "scripts":  {
+                    "test":  "node --check lib/index.js \u0026\u0026 node --check lib/client.js"
+                },
+    "keywords":  [
+                     "dsh-plugin",
+                     "deepseek-harness",
+                     "session",
+                     "delete",
+                     "删除会话"
+                 ],
+    "license":  "MIT",
+    "author":  "linusteller",
+    "engines":  {
+                    "node":  "\u003e=18"
+                },
+    "peerDependencies":  {
+                             "@deepseek-ai/cordis":  "\u003e=4"
+                         },
+    "peerDependenciesMeta":  {
+                                 "@deepseek-ai/cordis":  {
+                                                             "optional":  true
+                                                         }
+                             },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web"
+                           }
+            },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/Linusteller/dsh-session-delete.git"
+                   },
+    "homepage":  "https://github.com/Linusteller/dsh-session-delete#readme",
+    "bugs":  {
+                 "url":  "https://github.com/Linusteller/dsh-session-delete/issues"
+             },
+    "publishConfig":  {
+                          "access":  "public"
+                      }
 }
