@@ -51,7 +51,7 @@ dsh plugin --profile desktop add dsh-delete-sessions
 
 ## 安全
 
-- 删除路由只接受**回环来源**的 POST，且 body 只承载一个 `sessionId`。
+- 删除路由只接受**同源**的 POST：请求的 `Origin` 与页面同源（`Origin` 的 host 等于请求的 `Host`，或 `X-Forwarded-Host`；反代改写了 Host 的部署两者取其一即命中），回环地址仍放行，无 `Origin` 头的请求维持旧行为。浏览器页面无法伪造 `Origin`，因此对跨站请求（CSRF）的防护强度与原「回环」判定相同，同时不依赖 DSH 是否只在本机监听。body 只承载一个 `sessionId`。
 - session id 会先经 `sessionPersistence.stat()` 校验真实存在，才继续删除。
 - `locate()` 路径由 DSH 自身的 `encodeSegment` 编码，无路径穿越。
 
